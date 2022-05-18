@@ -1,3 +1,7 @@
+/**
+ * @file Entregable n 1, coderhouse
+ * @author Ramon Sanchez <rsanchez2@teco.com.ar>
+ */
 //Inicializa variables
 let repetir = true;
 let tamaño = 0;
@@ -22,12 +26,12 @@ while (repetir) {
         case '1':
             console.log('Accion 1. Dibujar triangulo.');
             for (let i = 1; i <= tamaño; i++) {
-                let lineToPrint = "";
+                let lineToPrint = "  ";
                 for (let j = tamaño - i; j > 0; j--) {
-                    lineToPrint += " ";
+                    lineToPrint += "  ";
                 }
                 for (let j = i * 2 - 1; j > 0; j--) {
-                    lineToPrint += "x";
+                    lineToPrint += " x";
                 }
                 console.log(lineToPrint);
             }
@@ -35,9 +39,9 @@ while (repetir) {
           case '2':
             console.log('Accion 2.  Dibujar cuadrado.');
             for (let i = 1; i <= tamaño; i++) {
-                let lineToPrint = "";
+                let lineToPrint = "  ";
                 for (let j = tamaño; j > 0; j--) {
-                    lineToPrint += "x";
+                    lineToPrint += " x";
                 }
                 console.log(lineToPrint);
             }
