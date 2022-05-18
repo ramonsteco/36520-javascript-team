@@ -49,6 +49,8 @@ while (repetir) {
           case '3':
             console.log('Accion 3.  Dibujar casa.');
             // Dibujar triangulo
+            let anchoCuadrado = 0;
+            let altoCuadrado = tamaño;
             for (let i = 1; i <= tamaño; i++) {
                 let lineToPrint = "  ";
                 for (let j = tamaño - i; j > 0; j--) {
@@ -58,12 +60,13 @@ while (repetir) {
                     lineToPrint += " x";
                 }
                 console.log(lineToPrint);
+                anchoCuadrado = (lineToPrint.length / 2) - 1;
             }
             // Dibujar cuadrado
-            for (let i = 1; i <= tamaño; i++) {
-                let lineToPrint = "    ";
-                for (let j = tamaño; j > 0; j--) {
-                    lineToPrint += " x ";
+            for (let i = 1; i <= altoCuadrado; i++) {
+                let lineToPrint = "  ";
+                for (let j = anchoCuadrado; j > 0; j--) {
+                    lineToPrint += " x";
                 }
                 console.log(lineToPrint);
             }
