@@ -16,16 +16,26 @@
     <h1>Entregable n 2. Simulador Interactivo</h1>
     <div class="container">
         <div class="row">
-            <div class="card">
-                <h5 class="card-header">Receta aleatoria del día</h5>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary"><i class="bi bi-shuffle"></i> Go somewhere</a>
+            <div class="col-3">
+                <div class="card">
+                    <h5 class="card-header">Receta aleatoria</h5>
+                    <div class="card-body">
+                      <a href="#" onclick="recetaAleatoria()" class="btn btn-primary"><i class="bi bi-shuffle"></i> Ver receta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="tituloReceta"></h5>
+                      <h6 class="card-subtitle mb-2 text-muted" id="subTituloReceta"></h6>
+                      <p class="card-text" id="textoReceta"></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
