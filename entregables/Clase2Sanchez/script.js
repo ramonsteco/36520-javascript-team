@@ -1,9 +1,7 @@
-console.log(`formBusqueda `);
-const form = document.getElementById('formBusqueda');
-console.log(`formBusqueda ${formBusqueda}`);
-form.onsubmit = formBuscarSubmit;
-function formBuscarSubmit(event) {
-    console.log(`formBuscarSubmit ${event}`);
-
-    event.preventDefault();
-  }
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+}
+link.href = 'https://stackoverflow.com/favicon.ico';
