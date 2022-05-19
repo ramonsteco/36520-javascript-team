@@ -1,3 +1,8 @@
+/**
+ * @file constantes de recetas
+ * @author Ramon Sanchez <rsanchez2@teco.com.ar>
+ */
+//TODO traer las recetas desde una api.
 const faviconSpaghetti = 'spaghetti.ico';
 const faviconPizza = 'pizza.ico';
 const faviconCupcake = 'cupcake.ico';
