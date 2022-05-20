@@ -10,10 +10,10 @@ const iconCupcake = '🧁';
 const iconSpaghetti = '🍝';
 const iconPizza = '🍕';
 const ingredientesSpaghetti = `
-    🍜 200g de espaguetis
-    🧅 1/2 cebolla
-    🧄 2 dientes de ajo
-    🍅 400g de tomate triturado
+    🍜 200g de espaguetis <br />
+    🧅 1/2 cebolla <br />
+    🧄 2 dientes de ajo <br />
+    🍅 400g de tomate triturado <br />
     100ml de nata para cocinar (crema de leche) <br />
     1 cucharadita de pimentón dulce <br />
     1 cucharadita de orégano seco <br />
