@@ -42,7 +42,7 @@ function changeFavicon(favicon) {
 }
 
 function recetaAleatoria() {
-    let recetaRandom = getRandomInt(3);
+    let recetaRandom = getRandomInt(5);
     let receta = recetas[recetaRandom];
     console.log('receta', receta);
     let textoReceta = document.getElementById('textoReceta');
