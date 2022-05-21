@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera entrega del Proyecto Final</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1 class="text-center" id="tituloPagina"></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <h5 class="card-header">Receta aleatoria</h5>
+                    <div class="card-body">
+                      <a href="#" onclick="recetaAleatoria()" class="btn btn-primary"><i class="bi bi-shuffle"></i> Ver receta</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="tituloReceta"></h5>
+                      <h6 class="card-subtitle mb-2 text-muted" id="subTituloReceta"></h6>
+                      <p class="card-text" id="textoReceta"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+</body>
+
+</html>
