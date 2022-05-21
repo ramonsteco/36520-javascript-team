@@ -1,0 +1,9 @@
+.bg-orange {
+    background-color: hsla(27, 98%, calc(54% * var(--tor-bg-lightness, 1)), var(--tor-bg-opacity, 1)) !important;
+}
+.bg-lime {
+    background-color: hsla(146, 100%, calc(50% * var(--tor-bg-lightness, 1)), var(--tor-bg-opacity, 1)) !important;
+}
+.bg-purple {
+    background-color: hsla(261, 51%, calc(51% * var(--tor-bg-lightness, 1)), var(--tor-bg-opacity, 1)) !important;
+}

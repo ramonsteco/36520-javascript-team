@@ -17,6 +17,19 @@
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+/**
+ * Función para obtener el color de fondo del ingrediente
+ *  * @param ingrediente - ingrediente
+ */
+ function getColorIngrediente(ingrediente) {
+    if(ingrediente.color === Color.Blanco){ return { bg: 'bg-light', textColor: 'text-dark'}}
+    if(ingrediente.color === Color.Rojo){ return { bg: 'bg-danger', textColor: 'text-white'};}
+    if(ingrediente.color === Color.Verde){ return { bg: 'bg-success', textColor: 'text-white'};}
+    if(ingrediente.color === Color.Amarillo){ return { bg: 'bg-warning', textColor: 'text-white'};}
+    if(ingrediente.color === Color.Violeta){ return { bg: 'bg-purple', textColor: 'text-white'};}
+    if(ingrediente.color === Color.Naranja){ return { bg: 'bg-orange', textColor: 'text-white'};}
+    return { bg: 'bg-white', textColor: 'text-dark'};
+}
 
 function changeFavicon(favicon) {
     var link = document.querySelector("link[rel~='icon']");
@@ -29,12 +42,13 @@ function changeFavicon(favicon) {
 }
 
 function recetaAleatoria() {
-    let recetaRandom = getRandomInt(2);
+    let recetaRandom = getRandomInt(3);
     let receta = recetas[recetaRandom];
     console.log('receta', receta);
     let textoReceta = document.getElementById('textoReceta');
     let tituloReceta = document.getElementById('tituloReceta');
     let subTituloReceta = document.getElementById('subTituloReceta');
+    let colorIngrediente = 'bg-light';
     console.log(recetaRandom);
 
     if(receta != undefined){
@@ -43,7 +57,8 @@ function recetaAleatoria() {
         subTituloReceta.innerText = `${receta.tiempoElaboracion}`;
         textoReceta.innerHTML = '';
         for (const ingrediente of receta.ingredientes) {
-            textoReceta.innerHTML += `${ingrediente.cantidad} de ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} <br />`;
+            colorIngrediente =  getColorIngrediente(ingrediente);
+            textoReceta.innerHTML += `<span class="${colorIngrediente.bg} ${colorIngrediente.textColor}">${ingrediente.cantidad} de ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} </span><br />`;
         }
         textoReceta.innerHTML += ` <br />`;
         for (const instruccion of receta.instrucciones) {
