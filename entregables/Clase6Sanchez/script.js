@@ -18,36 +18,6 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-/**
- * Funcion para obetener la receta de acuerdo al parametro icon
- * @param {...number} num - A positive or negative number.
- */
-function getReceta(icon) {
-    let ingredientes = '';
-    let pasos = '';
-    switch (icon) {
-        case iconCupcake:
-            ingredientes = ingredientesCupcake;
-            pasos = pasosCupcake;
-            break;
-        case iconPizza:
-            ingredientes = ingredientesPizza;
-            pasos = pasosPizza;
-            break;
-        case iconSpaghetti:
-            ingredientes = ingredientesSpaghetti;
-            pasos = pasosSpaghetti;
-            break;
-    }
-    let receta = `
-      <b>Ingredientes</b><br />
-      ${ingredientes}
-      <b>Pasos</b><br />
-      ${pasos}
-    `;
-    return receta;
-}
-
 function changeFavicon(favicon) {
     var link = document.querySelector("link[rel~='icon']");
     if (!link) {
@@ -68,11 +38,10 @@ function recetaAleatoria() {
     console.log(recetaRandom);
 
     if(receta != undefined){
+        changeFavicon(receta.favicon);
         tituloReceta.innerText = `${receta.nombrePlato} ${receta.icon}`;
         subTituloReceta.innerText = `${receta.tiempoElaboracion}`;
         textoReceta.innerHTML = '';
-        //textoReceta.innerHTML = getReceta(iconSpaghetti);
-        //changeFavicon(faviconSpaghetti);
         for (const ingrediente of receta.ingredientes) {
             textoReceta.innerHTML += `${ingrediente.cantidad} de ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} <br />`;
         }
