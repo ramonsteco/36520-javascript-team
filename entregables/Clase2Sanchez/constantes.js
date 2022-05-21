@@ -3,12 +3,6 @@
  * @author Ramon Sanchez <rsanchez2@teco.com.ar>
  */
 //TODO traer las recetas desde una api.
-const faviconSpaghetti = 'spaghetti.ico';
-const faviconPizza = 'pizza.ico';
-const faviconCupcake = 'cupcake.ico';
-const iconCupcake = '🧁';
-const iconSpaghetti = '🍝';
-const iconPizza = '🍕';
 const ingredientesSpaghetti = `
     🍜 200g de espaguetis <br />
     🧅 1/2 cebolla <br />
