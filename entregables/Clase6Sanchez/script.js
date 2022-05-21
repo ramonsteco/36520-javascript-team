@@ -48,34 +48,38 @@ function getReceta(icon) {
     return receta;
 }
 
-function changeFavicon(icon) {
+function changeFavicon(favicon) {
     var link = document.querySelector("link[rel~='icon']");
     if (!link) {
         link = document.createElement('link');
         link.rel = 'icon';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
-    link.href = `img/${icon}`;
+    link.href = `img/${favicon}`;
 }
 
 function recetaAleatoria() {
     let recetaRandom = getRandomInt(3);
+    let receta = recetas[recetaRandom];
+    console.log('receta', receta);
     let textoReceta = document.getElementById('textoReceta');
     let tituloReceta = document.getElementById('tituloReceta');
     let subTituloReceta = document.getElementById('subTituloReceta');
     console.log(recetaRandom);
-    tituloReceta.innerText = `${receta.nombrePlato} ${receta.icon}`;
-    subTituloReceta.innerText = `${receta.tiempoElaboracion}`;
-    //textoReceta.innerHTML = getReceta(iconSpaghetti);
-    changeFavicon(faviconSpaghetti);
-    for (const ingrediente of receta.ingredientes) {
-        console.log(ingrediente.nombre);
-        console.log(ingrediente.cantidad);
-        textoReceta.innerHTML += `${ingrediente.nombre}`;
-    }
-    for (const ingrediente of receta.ingredientes) {
-        console.log(ingrediente.nombre);
-        console.log(ingrediente.cantidad);
+
+    if(receta != undefined){
+        tituloReceta.innerText = `${receta.nombrePlato} ${receta.icon}`;
+        subTituloReceta.innerText = `${receta.tiempoElaboracion}`;
+        textoReceta.innerHTML = '';
+        //textoReceta.innerHTML = getReceta(iconSpaghetti);
+        //changeFavicon(faviconSpaghetti);
+        for (const ingrediente of receta.ingredientes) {
+            textoReceta.innerHTML += `${ingrediente.cantidad} de ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} <br />`;
+        }
+        textoReceta.innerHTML += ` <br />`;
+        for (const instruccion of receta.instrucciones) {
+            textoReceta.innerHTML += `${instruccion.orden}-${instruccion.texto} <br />`;
+        }
     }
 }
 

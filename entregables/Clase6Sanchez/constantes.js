@@ -4,19 +4,6 @@
  */
 //TODO traer las recetas desde una api.
 
-const ingredientesSpaghetti = [
-    '🍜 200g de espaguetis',
-    ' 1/2 cebolla', '🧄 2 dientes de ajo',
-    '🍅 400g de tomate triturado',
-    '100ml de nata para cocinar (crema de leche)',
-    '1 cucharadita de pimentón dulce',
-    '1 cucharadita de orégano seco',
-    '100ml del caldo donde cozamos los espaguetis',
-    'sal y pimienta ',
-    'aceite de oliva',
-    'Opcionalmente queso rallado'
-];
-
 
 const ingredientesPizza = [
     'Harina, 1/2 k',
@@ -29,11 +16,11 @@ const ingredientesPizza = [
 
 
 const pasosPizza = [
-    '1- En un bol colocar harina y realizar un hueco en el centro. Incorporar la levadura desgranada, azúcar y media taza de agua tibia, disolver y tapar el recipiente con una bolsa plástica durante 15 minutos. Agregar el resto del agua y aceite de oliva. ',
-    '2- Salar la corona de harina y unir los ingredientes hasta logar una masa lisa y homogénea. Espolvorear con harina extra y dejar descansar hasta duplicar el volumen. Dividir el bollo en tres partes iguales.',
-    '3- Dejar descansar nuevamente unos minutos. Aceitar una fuente, cubrir con la masa esparciéndola con los dedos aceitados.',
-    '4- Cocinar en el piso del horno caliente hasta que la base quede crocante. ',
-    '5- Distribuir sobre la pizza los ingredientes deseados y llevar a horno caliente por 10 a 15 minutos para cocinar la pizza. Retirar y servir.'
+    '1-  ',
+    '2- ',
+    '3- ',
+    '4- ',
+    '5- '
 ];
 
 const ingredientesCupcake = [
