@@ -85,14 +85,16 @@ class Receta {
      * @param {*} ingredientes
      * @param {*} instrucciones
      * @param {*} presentacion
+     * @param {*} icon
      * @memberof Receta
      */
-    constructor(nombrePlato, tiempoElaboracion, ingredientes, instrucciones, presentacion) {
+    constructor(nombrePlato, tiempoElaboracion, ingredientes, instrucciones, presentacion, icon) {
         this.ingredientes = ingredientes;
         this.tiempoElaboracion = tiempoElaboracion;
         this.nombrePlato = nombrePlato;
         this.instrucciones = instrucciones;
         this.presentacion = presentacion;
+        this.icon = icon;
     }
 }
 

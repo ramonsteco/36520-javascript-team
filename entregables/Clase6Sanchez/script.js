@@ -64,25 +64,18 @@ function recetaAleatoria() {
     let tituloReceta = document.getElementById('tituloReceta');
     let subTituloReceta = document.getElementById('subTituloReceta');
     console.log(recetaRandom);
-    switch (recetaRandom) {
-        case 0:
-            tituloReceta.innerText = `Spaghetti ${iconSpaghetti}`;
-            subTituloReceta.innerText = 'Tiempo 30 min';
-            textoReceta.innerHTML = getReceta(iconSpaghetti);
-            changeFavicon(faviconSpaghetti);
-            break;
-        case 1:
-            tituloReceta.innerText = `Pizzas ${iconPizza}`;
-            subTituloReceta.innerText = 'Tiempo 20 min';
-            textoReceta.innerHTML = getReceta(iconPizza);
-            changeFavicon(faviconPizza);
-            break;
-        case 2:
-            tituloReceta.innerText = `Cupcakes ${iconCupcake}`;
-            subTituloReceta.innerText = 'Tiempo 45 min';
-            textoReceta.innerHTML = getReceta(iconCupcake);
-            changeFavicon(faviconCupcake);
-            break;
+    tituloReceta.innerText = `${receta.nombrePlato} ${receta.icon}`;
+    subTituloReceta.innerText = `${receta.tiempoElaboracion}`;
+    //textoReceta.innerHTML = getReceta(iconSpaghetti);
+    changeFavicon(faviconSpaghetti);
+    for (const ingrediente of receta.ingredientes) {
+        console.log(ingrediente.nombre);
+        console.log(ingrediente.cantidad);
+        textoReceta.innerHTML += `${ingrediente.nombre}`;
+    }
+    for (const ingrediente of receta.ingredientes) {
+        console.log(ingrediente.nombre);
+        console.log(ingrediente.cantidad);
     }
 }
 

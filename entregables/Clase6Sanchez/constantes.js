@@ -63,15 +63,4 @@ const tips = [
 
 
 
-recetas = [
-    { ingredientes: ingredientesSpaghetti, pasos: pasosSpaghetti, cocinero: 'Cocinero 1' },
-    { ingredientes: ingredientesPizza, pasos: pasosPizza, cocinero: 'Cocinero 2' },
-    { ingredientes: ingredientesCupcake, pasos: pasosCupcake }
-];
-console.log(ingredientesSpaghetti);
-console.log(pasosSpaghetti);
-console.log(ingredientesPizza);
-console.log(pasosPizza);
-console.log(ingredientesCupcake);
-console.log(pasosCupcake);
-console.log('recetas', recetas);
+
