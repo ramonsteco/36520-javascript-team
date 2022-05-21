@@ -58,7 +58,7 @@ function recetaAleatoria() {
         textoReceta.innerHTML = '';
         for (const ingrediente of receta.ingredientes) {
             colorIngrediente =  getColorIngrediente(ingrediente);
-            textoReceta.innerHTML += `<span class="${colorIngrediente.bg} ${colorIngrediente.textColor}">${ingrediente.cantidad} de ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} </span><br />`;
+            textoReceta.innerHTML += `<span class="${colorIngrediente.bg} ${colorIngrediente.textColor}">${ingrediente.cantidad} ${isNaN(ingrediente.cantidad)?'de':''} ${ingrediente.nombre} ${ingrediente.icon ? ingrediente.icon : ''} </span><br />`;
         }
         textoReceta.innerHTML += ` <br />`;
         for (const instruccion of receta.instrucciones) {

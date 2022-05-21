@@ -32,7 +32,7 @@ let recetaPizza = new Receta('Pizza', '20 min',
     new Ingrediente(true, '25 g', 'Levadura fresca', Color.Blanco, undefined),
     new Ingrediente(true, '1 taza', 'Agua tibia', undefined, undefined),
     new Ingrediente(true, '1 cucharadita', 'Azúcar', Color.Blanco, undefined),
-    new Ingrediente(true, '1 cucharadas', 'aceite de oliva', Color.Verde, undefined),
+    new Ingrediente(true, '1 cucharada', 'aceite de oliva', Color.Verde, undefined),
     new Ingrediente(false, '1 cucharadita', 'sal', Color.Blanco, '🧂'),
 ],
 [
