@@ -1,2 +1,3 @@
-let tituloPagina = document.getElementById('tituloPagina');
-tituloPagina.innerText = 'Desafío: Incorporar Arrays';
+let tituloPagina = 'Desafío: Incorporar Arrays';
+document.getElementById('tituloPagina').innerText = tituloPagina;
+document.getElementById('headerPagina').innerText = tituloPagina;
