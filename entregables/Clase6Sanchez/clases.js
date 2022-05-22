@@ -4,12 +4,12 @@
  */
 
 const Color = {
-    Blanco: 'Blanco',
-    Verde: 'Verde',
-    Naranja: 'Naranja',
-    Amarillo: 'Amarillo',
-    Rojo: 'Rojo',
-    Violeta: 'Violeta',
+    Blanco: { nombre: 'Blanco', bg: 'bg-white', textColor: 'text-dark' },
+    Verde: { nombre: 'Verde', bg: 'bg-success', textColor: 'text-white' },
+    Naranja: { nombre: 'Naranja', bg: 'bg-orange', textColor: 'text-white' },
+    Amarillo: { nombre: 'Amarillo', bg: 'bg-warning', textColor: 'text-white' },
+    Rojo: { nombre: 'Rojo', bg: 'bg-danger', textColor: 'text-white' },
+    Violeta: { nombre: 'Violeta', bg: 'bg-purple', textColor: 'text-white' },
 };
 
 /**
